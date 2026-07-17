@@ -1,0 +1,392 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#07152b 60%,
+#132544 100%
+);
+
+}
+
+/* STARS */
+
+#stars{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+z-index:0;
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+/* MOON */
+
+.moon{
+
+position:fixed;
+
+top:60px;
+
+right:70px;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#fff7d1;
+
+box-shadow:
+
+0 0 35px rgba(255,255,200,.8),
+
+0 0 80px rgba(255,255,200,.5);
+
+}
+
+/* CARD */
+
+.container{
+
+position:relative;
+
+z-index:5;
+
+width:90%;
+
+max-width:900px;
+
+max-height:85vh;
+
+overflow-y:auto;
+
+scroll-behavior:smooth;
+
+padding:60px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 15px 50px rgba(0,0,0,.35);
+
+transition:1s;
+
+}
+
+.container h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+color:white;
+
+}
+
+.container p{
+
+font-size:24px;
+
+color:#dbeafe;
+
+margin-bottom:40px;
+
+line-height:1.7;
+
+}
+
+button{
+
+padding:16px 42px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:white;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 20px white;
+
+}
+
+/* ==========================
+TYPEWRITER
+========================== */
+
+#typing{
+
+font-size:48px;
+
+line-height:1.7;
+
+color:white;
+
+animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+/* ==========================
+LETTER
+========================== */
+
+.letter{
+
+width:90%;
+
+max-width:800px;
+
+margin:auto;
+
+padding:50px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+font-family:'Caveat',cursive;
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.letter h2{
+
+font-size:58px;
+
+margin-bottom:30px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+.letter p{
+
+white-space:pre-wrap;
+
+text-align:left;
+
+font-size:34px;
+
+line-height:1.8;
+
+color:white;
+
+}
+
+.moon{
+
+animation:moonGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes moonGlow{
+
+0%,100%{
+
+box-shadow:
+0 0 30px rgba(255,255,200,.8),
+0 0 70px rgba(255,255,200,.4);
+
+}
+
+50%{
+
+box-shadow:
+0 0 50px rgba(255,255,220,1),
+0 0 120px rgba(255,255,220,.7);
+
+}
+
+}
+
+/* ===========================
+SHOOTING STAR
+=========================== */
+
+#shootingStar{
+
+position:fixed;
+
+top:-100px;
+
+left:-100px;
+
+width:160px;
+
+height:2px;
+
+background:linear-gradient(to right,white,transparent);
+
+transform:rotate(-35deg);
+
+opacity:0;
+
+z-index:1000;
+
+}
+
+.shoot{
+
+animation:shoot 1.3s linear;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+top:120px;
+
+left:-200px;
+
+opacity:1;
+
+}
+
+100%{
+
+top:420px;
+
+left:120%;
+
+opacity:0;
+
+}
+
+}
+
+.container{
+
+transition:all .8s ease;
+
+}
+
+.letter{
+
+animation:fadeLetter 1.5s;
+
+}
+
+@keyframes fadeLetter{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px) scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+}
+
+.line{
+
+    margin-bottom:22px;
+
+    animation:fade .5s;
+
+}
